@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Accounts and Conatact Information</title>
+    <link rel="icon" type="image/png" href="AI_Favicon.png">
+</head>
+
+<body>
+
+    	<h1>Accounts and Contact Information</h1>
+    <ul>
+        <li class="dropdown">
+             <a href="#" class="dropbtn">Versions</a>
+            <div class="dropdown-content">
+                 <a href="index.html">The AI</a>
+                 <a href="TEST.AI.html">Experemental Test Version</a>
+                 <a href="GAMES.AI.html">TheJoshPROGRAM's Scratch Games</a>
+				 <a href="HD.AI.html">The AI: High-Definition</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            	<a href="#">Information</a>
+            <div class="dropdown-content">
+                 <a href="SourceAccounts.txt">Source code- HTML</a>
+                 <a href="SourceCSS.txt">Source code- CSS</a>
+                 <a href="SourceJScript.txt">Source code- Javascript</a>
+            </div>
+        </li>
+    </ul>
+    <p>Please only use the information provided to contact me for additions, bugs, and support.</p>
+    <p>Email: am9zaG5pY2t0ZWNoQGdtYWlsLmNvbQ=== (Yes, I am paranoid. This is included as a safety measure.)</p>
+    <p>Scratch Account: <a href="https://scratch.mit.edu/users/TheJoshPROGRAM/" class="standardlinks">TheJoshPROGRAM</a>.</p>
+    <p>Main Game: <a href="https://scratch.mit.edu/projects/135111196/" class="standardlinks">Totally Unaccurate Space Simulator</a>
+    </p>
+    <p>Scratch Games: <a href="scratchgames.html" class="standardlinks">Scratch Games by TheJoshPROGRAM</a>
+    </p>
+</body>

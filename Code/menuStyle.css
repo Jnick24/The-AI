@@ -1,0 +1,40 @@
+body {
+    background: blue;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+}
+@-webkit-keyframes mymove {
+    50% {
+        background-color: white;
+    }
+}
+@keyframes mymove {
+    50% {
+        background-color: #0000aa;
+    }
+}
+body {
+    color: #ffa500;
+}
+button {
+    background: blue;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+}
+@-webkit-keyframes mymove {
+    50% {
+        background-color: white;
+    }
+}
+@keyframes mymove {
+    50% {
+        background-color: #0000aa;
+    }
+}
+button {
+    border: none;
+    background-color: blue;
+    color: orange;
+    /*height: 5;
+	width: 10;*/
+}

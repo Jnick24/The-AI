@@ -1,0 +1,7 @@
+CURRENT VERSION- 10/30/2017
+
+The AI webpage group is online!
+
+Fixed various errors in Javascript
+
+Attempted to add branches to TEST.AI

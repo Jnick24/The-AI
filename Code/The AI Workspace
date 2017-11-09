@@ -1,0 +1,56 @@
+{
+  "htmlFiles": [
+    {
+      "fileId": "0Bw2Oi-3j0b3leWhuclZaQU1zOW8",
+      "contentType": "text/html",
+      "name": "MENU.AI.html",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    },
+    {
+      "fileId": "0Bw2Oi-3j0b3lM1RLeEJmV0JlU2c",
+      "contentType": "text/html",
+      "name": "CONTACT.AI.html",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    },
+    {
+      "fileId": "0Bw2Oi-3j0b3lamwtSjdPeERNcTQ",
+      "contentType": "text/html",
+      "name": "TEST.AI.html",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    },
+    {
+      "fileId": "0Bw2Oi-3j0b3lRGpTOXc0YUR5aVE",
+      "contentType": "text/html",
+      "name": "HD.AI.html",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    },
+    {
+      "fileId": "0Bw2Oi-3j0b3lNGxNajFweTk2RjA",
+      "contentType": "text/html",
+      "name": "index.html",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    }
+  ],
+  "cssFiles": [
+    {
+      "fileId": "0Bw2Oi-3j0b3lcnBGaFpaRHBjd1U",
+      "contentType": "text/css",
+      "name": "menuStyle.css",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    },
+    {
+      "fileId": "0Bw2Oi-3j0b3lcl9SSEFSVWo3MlE",
+      "contentType": "text/css",
+      "name": "style.css",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    }
+  ],
+  "javascriptFiles": [
+    {
+      "fileId": "0Bw2Oi-3j0b3laXFaaHh4UmxvOWc",
+      "contentType": "text/javascript",
+      "name": "code.js",
+      "path": "0Bw2Oi-3j0b3lcFFRSGRRVmRRVjg/"
+    }
+  ]
+}

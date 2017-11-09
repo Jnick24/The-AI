@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script src="code.js" type="text/javascript" charset="utf-8"></script>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <title>innerHTML() Test (Prototype)</title>
+    </head>
+
+    <body>
+    <h1>Blank Webpage</h1>
+    <h4 id="credits">By Joshua Nicholas</h4>
+    <button onclick="myFunction()">Press here to see the text you typed below go to the paragraph below it.</button>
+    <!--The button above runs the JavaScript.-->
+    <textarea rows="30" cols="100" id="textarea1">Follow the directions on the button above.</textarea>
+    <div id="test1">
+           <p id="test"></p>
+    </div>
+
+    <script>
+        var numbera = 0;
+        function myFunction() {
+            var response = document.getElementById("textarea1").value;
+             document.getElementById("test").innerHTML = "(RESPONSE " + numbera + ") User " + response; 
+            numbera++;
+        }
+    </script>
+
+    </body>
+
+</html>

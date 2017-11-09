@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>The AI (experemental development version)</title>
+    <link rel="icon" type="image/png" href="AI_Favicon.png">
+</head>
+
+<body>
+    <div id="Header">
+         <h1>The AI (experemental development version)</h1>
+         <h4 id="credits">By Jnick</h4>
+    </div>
+    <ul>
+        <li class="dropdown">
+             <a href="#" class="dropbtn">Versions</a>
+            <div class="dropdown-content">
+                 <a href="index.html">The AI</a>
+
+                 <a href="HD.AI.html">The AI: High-Definition</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            	<a href="#">Information</a>
+            <div class="dropdown-content">
+                 <a href="Sourcetest.txt">Source code- HTML</a>
+                	<a href="SourceCSS.txt">Source code- CSS</a>
+                	<a href="SourceJScript.txt">Source code- Javascript</a>
+            </div>
+        </li>
+        <li class="dropdown">
+             <a href="CONTACT.AI.html">Contact Information</a>
+        </li>
+    </ul>
+    <div id="InputOutput">
+        <button id="button2" onclick="myFunction()">Press here</button>
+        <button id="button3" onclick="reset()">Reset</button>
+        <!--The button above runs the JavaScript.-->
+        <textarea rows="5" cols="20" id="textarea1">Input here.</textarea>
+        <button onclick="setName()" id="confirm">Confirm</button>
+        <textarea rows="1" cols="10" id="namebox">Name</textarea>
+        <p id="test">
+             <b>INSTRUCTIONS:</b>
+            <br>Please enter your name into the text area that says 'Name' and leave it there.
+            <br>Then press 'Confirm'
+            <br>Click on the button that says 'Press Here' to run the program.
+            <br>Click on the 'Reset' button to reset the program.
+            <br>The menu functions as normal.
+            <br>Follow the directions on this paraghaph (after you press the button!).
+            <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.
+        </p>
+        <button onclick="startprint()">Print webpage</button>
+    </div>
+    <script>
+        var question = "";
+        var functioncount = 0;
+        var firstpick = "";
+        var name = "";
+
+        function myFunction() {
+            if (firstpick === "done2") {
+                branch2();
+            } else if (firstpick === "done1") {
+                document.getElementById("test").innerHTML = "Sorry, I'm not done with this yet. Maybe later?";
+                console.log("Err... Uh... Maybe I never started on it...")
+            }
+            console.log("Functioncount: " + functioncount);
+            var response = document.getElementById("textarea1").value;
+            console.log("Response: " + response);
+            functioncount = (functioncount + 1);
+            //Use this for response
+            if (functioncount === 1) {
+                document.getElementById("test").innerHTML = "Hello! Please type your name.";
+            } else if (functioncount === 2) {
+                //   var name = document.getElementById("textarea1").value;
+                document.getElementById("test").innerHTML = "Hello, " + name + "!";
+            } else if (functioncount === 3) {
+                if (response.toLowerCase() === "instructions") {
+                    document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Then press 'Confirm'<br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paraghaph (after you press the button!).<br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.";
+                } else {
+                    document.getElementById("test").innerHTML = "Loading Program...";
+                }
+            } else if (functioncount === 4) {
+                document.getElementById("test").innerHTML = "What would you like for me to do? There are two options; type 1 to <br> continue with this program or 2 to run a confedential series of programs.";
+            } else if (functioncount === 5) {
+                if (response === "1") {
+                    firstpick = "done1";
+                } else if (response === "2") {
+                    document.getElementById("test").innerHTML = "Loading...";
+                    firstpick = "done2";
+                    branch2();
+                }
+            }
+            //   document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
+
+        }
+
+
+        function reset() {
+            functioncount = 0;
+            document.getElementById("test").innerHTML = "Reset.";
+            console.log("Reset.")
+        }
+
+        function startprint() {
+            window.print();
+        }
+
+        function branch2() {
+            if (functioncount === 6) {
+                document.getElementById("test").innerHTML = "Okay, " + name + ". I was able to pull this off, and that means that I am good <br>with Javascript.";
+            } else if (functioncount === 7) {
+                document.getElementById("test").innerHTML = "I'm still bad at formatting, though.";
+            }
+        }
+
+        function setName() {
+            name = document.getElementById("namebox").value;
+        }
+    </script>
+</body>
