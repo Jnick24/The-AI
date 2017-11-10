@@ -10,7 +10,7 @@
 <body>
     <div id="Header">
          <h1>The AI (experemental development version)</h1>
-         <h4 id="credits">By Jnick</h4>
+         <h4 id="credits">By Jnick24</h4>
     </div>
     <ul>
         <li class="dropdown">
@@ -70,7 +70,7 @@
                 
                 document.getElementById("test").innerHTML = "Loading Program...";
             } else if (functioncount === 4) {
-                document.getElementById("test").innerHTML = "Hello, this is Jnick here. ";
+                document.getElementById("test").innerHTML = "Hello, this is Jnick24 here. ";
             } else if (functioncount === 5) {
                 document.getElementById("test").innerHTML = "blank";
             } else if (functioncount === 6) {

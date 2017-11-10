@@ -127,7 +127,7 @@
 
                     }
                 } else if (confidential_choice.toLowerCase() == "p") {
-                    alert("Pixelated Data Files has been removed form the database by Jnick.");
+                    alert("Pixelated Data Files has been removed form the database by Jnick24.");
                 }
 
                 console.log("Program End.");

@@ -19,12 +19,12 @@ body {
 #MainText {
     position: absolute;
     left: 10px;
-    top: 160px;
+    top: 180px;
 }
 #button1 {
     position: absolute;
     left: 50px;
-    top: 130px;
+    top: 140px;
     padding: 15px 31px;
 }
 #button2 {
