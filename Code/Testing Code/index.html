@@ -22,7 +22,15 @@
         var numbera = 0;
         function myFunction() {
             var response = document.getElementById("textarea1").value;
-             document.getElementById("test").innerHTML = "(RESPONSE " + numbera + ") User " + response; 
+             document.getElementById("test").innerHTML = "(RESPONSE " + numbera + ") User: " + response; 
+			 if (numbera == 10) {
+			     document.getElementById("test").innerHTML = "(RESPONSE " + numbera + ") Admin: " + "You have pressed the button 10 times."; 
+
+			 } else if (numbera == 11) {
+			     document.getElementById("test").innerHTML = "(RESPONSE " + numbera + ") Admin: " + "I won't say anything else, but this is kind of boring. I would check out TEST.AI.html or The AI (Experemental Development Version) if you want to see more. <br> This page will redirect in 10 seconds...";
+				 document.getElementById("textarea1").innerHTML = "Hi there! I can change the text in here, too."
+				 window.setTimeout(function(){ window.location = "../TEST.AI.html"; },10000);
+			 }
             numbera++;
         }
     </script>
