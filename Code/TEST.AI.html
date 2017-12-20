@@ -51,6 +51,7 @@
             <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.
         </p>
         <button onclick="startprint()">Print webpage</button>
+		<p>See it on Github! <a href="https://github.com/Jnick24/The-AI">https://github.com/Jnick24/The-AI</a></p>
     </div>
     <script>
         var question = "";
@@ -62,8 +63,7 @@
             if (firstpick === "done2") {
                 branch2();
             } else if (firstpick === "done1") {
-                document.getElementById("test").innerHTML = "Sorry, I'm not done with this yet. Maybe later?";
-                console.log("Err... Uh... Maybe I never started on it...")
+                branch1();
             }
             console.log("Functioncount: " + functioncount);
             var response = document.getElementById("textarea1").value;
@@ -85,7 +85,8 @@
                 document.getElementById("test").innerHTML = "What would you like for me to do? There are two options; type 1 to <br> continue with this program or 2 to run a confedential series of programs.";
             } else if (functioncount === 5) {
                 if (response === "1") {
-                    firstpick = "done1";
+				    firstpick = "done1";
+                    branch1();
                 } else if (response === "2") {
                     document.getElementById("test").innerHTML = "Loading...";
                     firstpick = "done2";
@@ -106,6 +107,13 @@
         function startprint() {
             window.print();
         }
+		function branch1() {
+		    if (functioncount === 6) {
+			    document.getElementById("test").innerHTML = "Okay, I'll do that for you.";
+			} else if (functioncount === 7) {
+			    document.getElementById("test").innerHTML = "I'm sorry, but I'm having a hard time thinking about what I should make it <br>do... Maybe make a pull request on GitHub.";
+			}
+		}
 
         function branch2() {
             if (functioncount === 6) {

@@ -21,6 +21,9 @@ button {
     -webkit-animation: mymove 5s infinite;
     animation: mymove 5s infinite;
 }
+a {
+    color:orange;
+}
 @-webkit-keyframes mymove {
     50% {
         background-color: white;
