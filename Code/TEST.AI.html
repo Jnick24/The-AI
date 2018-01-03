@@ -56,7 +56,9 @@
         var functioncount = 0;
         var firstpick = "";
         var name = "";
-
+        var resetName = "";
+		var alwaysResetName = "";
+		
         function myFunction() {
             if (firstpick === "done2") {
                 branch2();
@@ -84,11 +86,9 @@
             } else if (functioncount === 5) {
                 if (response === "1") {
 				    firstpick = "done1";
-                    branch1();
                 } else if (response === "2") {
                     document.getElementById("test").innerHTML = "Loading...";
                     firstpick = "done2";
-                    branch2();
                 }
             }
             //   document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
@@ -98,6 +98,16 @@
 
         function reset() {
             functioncount = 0;
+			if (alwaysResetName.toLowerCase() != "n" & alwaysResetName.toLowerCase != "y") {
+			    resetName = prompt("Would you like me to reset your name? (y/N)");
+			    if (resetName.toLowerCase() === "y") {
+			        name = "";
+			    	alwaysResetName = prompt("Always reset name? (Y/n)");
+			    }
+			} else if (alwaysResetName.toLowerCase() === "y") {
+			    name = "";
+			}
+			firstpick = "";
             document.getElementById("test").innerHTML = "Reset.";
             console.log("Reset.")
         }
@@ -106,20 +116,20 @@
             window.print();
         }
 		function branch1() {
-		    if (functioncount === 6) {
+		    if (functioncount === 5) {
 			    document.getElementById("test").innerHTML = "Okay, I'll do that for you.";
-			} else if (functioncount === 7) {
+			} else if (functioncount === 6) {
 			    document.getElementById("test").innerHTML = "I'm sorry, but I'm having a hard time thinking about what I should make it <br>do... Maybe make a pull request on GitHub.";
 			}
 		}
 
         function branch2() {
-            if (functioncount === 6) {
+            if (functioncount === 5) {
                 document.getElementById("test").innerHTML = "Okay, " + name + ". I was able to pull this off, and that means that I am good <br>with Javascript. I might continue this later; I have other things to do though :(";
-            } else if (functioncount === 7) {
+            } else if (functioncount === 6) {
                 document.getElementById("test").innerHTML = "I'm still bad at formatting, though.";
-            } else if (functioncount === 8) {
-			    document.getElementbyId("test").innerHTML = "Goodbye! This is the end of the program.";
+            } else if (functioncount === 7) {
+			    document.getElementById("test").innerHTML = "Goodbye! This is the end of the program.";
 			}
         }
 

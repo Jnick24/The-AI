@@ -1,19 +1,4 @@
 body {
-    background: blue;
-    -webkit-animation: mymove 5s infinite;
-    animation: mymove 5s infinite;
-}
-@-webkit-keyframes mymove {
-    50% {
-        background-color: white;
-    }
-}
-@keyframes mymove {
-    50% {
-        background-color: #0000aa;
-    }
-}
-body {
     color: #ffa500;
 }
 #MainText {
@@ -56,7 +41,7 @@ body {
 a {
     color:orange;
 }
-/*DIVIDER*/
+/*DIVIDER- Not My Code (Menu)*/
  ul {
     list-style-type: none;
     margin: 0;
@@ -103,4 +88,20 @@ li.dropdown {
 }
 .standardlinks {
     color: #ffa500;
+}
+/*Divider- Background Colors*/
+body {
+    background: blue;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+}
+@-webkit-keyframes mymove {
+    50% {
+        background-color: white;
+    }
+}
+@keyframes mymove {
+    50% {
+        background-color: #0000aa;
+    }
 }

@@ -1,3 +1,9 @@
+/*
+
+I have a seperate CSS file for the menu because I put the links inside buttons and I want the buttons to be invisible. 
+I know that I could only have one CSS file, but I'm to lazy to do that and it saves some effort this way.
+
+*/
 body {
     background: blue;
     -webkit-animation: mymove 5s infinite;
