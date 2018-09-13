@@ -91,7 +91,7 @@ li.dropdown {
 }
 /*Divider- Background Colors*/
 body {
-    background: blue;
+    background: #0000dd;
     -webkit-animation: mymove 5s infinite;
     animation: mymove 5s infinite;
 }
