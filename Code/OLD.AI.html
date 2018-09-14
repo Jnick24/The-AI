@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <!--Please excuse the sloppy formatting-->
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script src="code.js" type="text/javascript" charset="utf-8"></script>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/png" href="AI_Favicon.png">
+        <title>The AI (Old)</title>
+    </head>
+
+    <body>
+
+         <h1>The AI (Old)</h1>
+		 <h4 id="credits">By Jnick24</h4>
+        <ul>
+            <li class="dropdown">
+                 <a href="#" class="dropbtn">Versions</a>
+                <div class="dropdown-content">
+                     <a href="index.html">The AI</a>
+                     <a href="HD.AI.html">The AI: High-Definition</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                	<a href="#">Information</a>
+                <div class="dropdown-content">
+                     <a href="https://github.com/Jnick24/The-AI/blob/master/Code/OLD.AI.html">Source code</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                 <a href="CONTACT.AI.html">Contact Information</a>
+            </li>
+        </ul>
+        <button id="button1" onclick="allFunction()">Run Program</button>
+        <div id="MainText">
+            <p>This is an in-progress chatbot that I am working on. As of now, it doesn't do moch.</p>
+			<p>See it on Github! <a href="https://github.com/Jnick24/The-AI">https://github.com/Jnick24/The-AI</a></p>
+        </div>
+        <script>
+            //I included the Javavscript in the HTML document so that you can activate it with a button. If it is possible to do this from an external source, please write a comment and I will change it. Thank you!
+
+
+            function allFunction() {
+                console.log("Thank you for looking at this through the console. It provides a bit of a 'system log' and the source code.");
+                //variable section- it is in the function so it clears the variables.
+				//I need to come up with better names
+                var bigif = "";
+                var confidential_choice = "";
+                var Nightclan_Realname = "";
+                var Nightclan_Catname = "";
+                var Nightclan_Clan = "";
+                var Nightclan_Leadername = "";
+                var Nightclan_Report_1 = "";
+                var Nightclan_Report = "";
+                //main if statement- bigif
+                alert("Loading...");
+                alert("Finished loading.");
+                console.log("Loading Bigif prompt.");
+                bigif = prompt("What would you like for me to do? There are three options; type 1 to continue with this program, 2 to run a confedential series of programs, and 0 to make this program end.");
+                console.log("Results: " + bigif);
+                if (bigif === "1") {
+                    alert("Psst! There might be audio in the next couple of updates. Don't tell anyone! \n \nCheck out the audio testing file in the menu.");
+
+                } else if (bigif === "2") {
+                    //checks to see if you want to run Pixelated data files or Nightclan files
+                    confidential_choice = prompt("Type P if you want to run archived Pixelated data files or type C if you want to run Nightclan.");
+                    if (confidential_choice.toLowerCase() === "c") {
+                        Nightclan_Leadername = prompt("Please type the clan name of the leader of Nightclan.");
+                        if (Nightclan_Leadername.toLowerCase() === "flintstar") {
+                            Nightclan_Realname = prompt("Can you please put in your first name?");
+                            Nightclan_Catname = prompt("Please enter your clan name.");
+                            if (Nightclan_Catname === "") {
+                                alert("Really.");
+                                console.log("Seriously?");
+                            } else if (Nightclan_Catname === "Flintstar") {
+                                var i = "";
+                                alert("Hi, Derrick! How's it going? You don't really need to go through this- It's kind of out-of-date. If you aren't Derrick then... erm... Uh... GO AWAY. Unless you're Jnick24. That's me. Anyways... STOP READING THIS. NOW!!! Okay. So. Have you left yet? No? Yes? Do you like Alt-F4? No? Good. PREPARE TO DIE OF BEING UNABLE TO EXIT!!!");
+                                while (i.toLowerCase() != "joshua") {
+                                    i = prompt("I THROW MY WRAITH ON YOU!!! THE ONLY WAY TO ESCAPE IS TO WRITE THE FIRST NAME OF THE CREATOR OF THIS WEBPAGE!!!");
+                                }
+								alert("PROTIP: Don't do that")
+                            } else {
+                                alert("Hello, " + Nightclan_Realname + ", also known as " + Nightclan_Catname + ".");
+                                Nightclan_Clan = prompt("What clan are do you belong to?");
+                                if (Nightclan_Clan.toLowerCase() === "nightclan") {
+                                    alert("Hello, " + Nightclan_Catname + ".");
+                                    console.log('Results: ' + Nightclan_Realname + ", " + Nightclan_Catname + ", " + Nightclan_Leadername + ". Order was as aksed.");
+                                    alert("Welcome to Nightclan. My name is Greypelt. Because you have been gone so long, " + Nightclan_Catname + ", You should probably have a refresher of the camp and our clan. First, you should probably tell Flintstar that you have arrived before I show you around.");
+                                    Nightclan_Report_1 = prompt("Welcome back, " + Nightclan_Catname + ". Do you have anything to report?");
+                                    if (Nightclan_Report_1.toLowerCase() === "yes") {
+                                        Nightclan_Report = prompt("What do you have to report?");
+                                        alert("Okay... I'll keep that in mind.");
+                                    } else {
+                                        alert("Good.");
+                                    }
+                                }
+                            }
+
+                        } else if (Nightclan_Leadername.toLowerCase() === "derrick") {
+                            //Nightclan code- email WVcwNWVtRkhOWEJaTW5Rd1dsZE9iMUZIWkhSWlYyeHpURzFPZG1KUlBUMD0= (triple encoded) if you want it explained.
+                            Nightclan_Realname = prompt("Can you please put in your first name?");
+                            Nightclan_Catname = prompt("Please enter your clan name.");
+                            if (Nightclan_Catname === "") {
+                                alert("Really.");
+                                console.log("Seriously?");
+                            } else if (Nightclan_Catname === "Flintstar") {
+                                var i = "";
+                                alert("Hi, Derrick! How's it going? You don't really need to go through this- It's kind of out-of-date. If you aren't Derrick then... erm... Uh... GO AWAY. Unless you're Jnick24. That's me. Anyways... STOP READING THIS. NOW!!! Okay. So. Have you left yet? No? Yes? Do you like Alt-F4? No? Good. PREPARE TO DIE OF BEING UNABLE TO EXIT!!!");
+                                while (i.toLowerCase() != "joshua") {
+                                    i = prompt("I THROW MY WRAITH ON YOU!!! THE ONLY WAY TO ESCAPE IS TO WRITE THE FIRST NAME OF THE CREATOR OF THIS WEBPAGE!!!");
+                                }
+                            } else {
+                                alert("Hello, " + Nightclan_Realname + ", also known as " + Nightclan_Catname + ".");
+                                Nightclan_Clan = prompt("What clan are do you belong to?");
+                                if (Nightclan_Clan.toLowerCase() === "nightclan") {
+                                    alert("Hello, " + Nightclan_Catname + ".");
+                                    console.log('Results: ' + Nightclan_Realname + ", " + Nightclan_Catname + ", " + Nightclan_Leadername + ". Order was as aksed.");
+                                    alert("Welcome to Nightclan. My name is Greypelt. Because you have been gone so long, " + Nightclan_Catname + ", You should probably have a refresher of the camp and our clan. First, you should probably tell Flintstar that you have arrived before I show you around.");
+                                    Nightclan_Report_1 = prompt("Welcome back, " + Nightclan_Catname + ". Do you have anything to report?");
+                                    if (Nightclan_Report_1.toLowerCase() === "yes") {
+                                        Nightclan_Report = prompt("What do you have to report?");
+                                        alert("Okay... I'll keep that in mind.");
+                                    } else {
+                                        alert("Good.");
+                                    }
+                                }
+                            }
+                        }
+                    } else if (confidential_choice.toLowerCase() == "p") {
+                    alert("Pixelated Data Files has been removed from the database by Jnick24.");
+                }
+
+                } 
+
+                console.log("Program End.");
+            }
+
+
+            
+        </script>
+
+    </body>
+
+</html>
