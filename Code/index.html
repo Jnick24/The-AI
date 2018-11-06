@@ -67,7 +67,19 @@
         var name = "";
         var resetName = "";
 		var alwaysResetName = "";
+		var audio_yn = ""; //Audio variable
+		//AUDIO//
 		
+		var audio1 = new Audio('question_one.mp3');
+		var audio2 = new Audio('branch1_runnumber5.mp3');
+		var audio3 = new Audio('branch2_runnumber6.mp3');
+		var audio4 = new Audio('finished_loading.mp3');
+		var audio5 = new Audio('subbranch1_1_runnumber8.mp3');
+		var audio6 = new Audio('subbranch1_2_runnumber8.mp3');
+		var audio7 = new Audio('subbranch1_3_runnumber8.mp3');
+		var audio8 = new Audio('goodbye.mp3');
+		
+		//AUDIO//
         function myFunction() {
             runnumber = (runnumber + 1);
 		    console.log("runnumber: " + runnumber);
@@ -87,10 +99,16 @@
                 document.getElementById("test").innerHTML = "Hello, " + name + "!";
             } else if (runnumber === 2) {
                 document.getElementById("test").innerHTML = "Loading...";
+				audio_yn = prompt("Would you like audio? y/N"); //Audio prompt
+				console.log("Audio Results: " + audio_yn.toUpperCase());
             } else if (runnumber === 3) { //I put the "loading" stuff in this program to buy myself time and to save effort.
                 if (response.toLowerCase() === "instructions") {
                     document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Then press 'Confirm'<br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paraghaph (after you press the button!).<br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times. <br>Whenever there is an option, press Press Here twice after answering.";
                 } else {
+				    if (audio_yn.toLowerCase() === "y") { //Audio Player
+					    audio4.play();
+						console.log("Audio played");
+					}
                     document.getElementById("test").innerHTML = "Finished Loading.";
                 }
             } else if (runnumber === 4) {
@@ -197,6 +215,7 @@
 			}
 			firstpick = "";
 			secondpick = "";
+			audio_yn = "";
             document.getElementById("test").innerHTML = "Reset.";
             console.log("Reset.")
         }
