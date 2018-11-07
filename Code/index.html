@@ -45,7 +45,7 @@
             <br>Click on the button that says 'Press Here' to run the program.
             <br>Click on the 'Reset' button to reset the program.
             <br>The menu functions as normal.
-            <br>Follow the directions on this paraghaph (after you press the button!).
+            <br>Follow the directions on this paragraph (after you press the button!).
             <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.
 			<br>Whenever there is an option, press "Press Here" twice after answering.
         </p>
@@ -70,14 +70,14 @@
 		var audio_yn = ""; //Audio variable
 		//AUDIO//
 		
-		var audio1 = new Audio('question_one.mp3');
-		var audio2 = new Audio('branch1_runnumber5.mp3');
-		var audio3 = new Audio('branch2_runnumber6.mp3');
-		var audio4 = new Audio('finished_loading.mp3');
-		var audio5 = new Audio('subbranch1_1_runnumber8.mp3');
-		var audio6 = new Audio('subbranch1_2_runnumber8.mp3');
-		var audio7 = new Audio('subbranch1_3_runnumber8.mp3');
-		var audio8 = new Audio('goodbye.mp3');
+		var audio1 = new Audio('audio/question_one.mp3');
+		var audio2 = new Audio('audio/branch1_runnumber5.mp3');
+		var audio3 = new Audio('audio/branch2_runnumber6.mp3');
+		var audio4 = new Audio('audio/finished_loading.mp3');
+		var audio5 = new Audio('audio/subbranch1_1_runnumber8.mp3');
+		var audio6 = new Audio('audio/subbranch1_2_runnumber8.mp3');
+		var audio7 = new Audio('audio/subbranch1_3_runnumber8.mp3');
+		var audio8 = new Audio('audio/goodbye.mp3');
 		
 		//AUDIO//
         function myFunction() {
@@ -103,7 +103,7 @@
 				console.log("Audio Results: " + audio_yn.toUpperCase());
             } else if (runnumber === 3) { //I put the "loading" stuff in this program to buy myself time and to save effort.
                 if (response.toLowerCase() === "instructions") {
-                    document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Then press 'Confirm'<br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paraghaph (after you press the button!).<br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times. <br>Whenever there is an option, press Press Here twice after answering.";
+                    document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Then press 'Confirm'<br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paragraph (after you press the button!).<br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times. <br>Whenever there is an option, press Press Here twice after answering.";
                 } else {
 				    if (audio_yn.toLowerCase() === "y") { //Audio Player
 					    audio4.play();
@@ -113,6 +113,10 @@
                 }
             } else if (runnumber === 4) {
                 document.getElementById("test").innerHTML = "What would you like for me to do? There are two options; type 1 to <br> continue with this program or 2 to run a confedential series of programs.";
+				if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio1.play();
+					console.log("Audio played");
+				}
             } else if (runnumber === 5) {
                 if (response === "1") {
 				    firstpick = "done1";
@@ -136,8 +140,16 @@
 			    subBranch1_3();
 			}
 		    if (runnumber === 5) {
+			    if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio2.play();
+					console.log("Audio played");
+				}
 			    document.getElementById("test").innerHTML = "Okay, I'll do that for you.";
 			} else if (runnumber === 6) {
+			    if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio3.play();
+					console.log("Audio played");
+				}
 			    document.getElementById("test").innerHTML = "How's it going? good/okay/bad";
 			} else if (runnumber === 7) {
 			    if (response.toLowerCase() === "good") {
@@ -172,8 +184,16 @@
 		    var response = document.getElementById("textarea1").value;
 		    if (runnumber === 8) {
 			    document.getElementById("test").innerHTML = "I'm glad you're feeling good, " + name + ".";
+				if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio5.play();
+					console.log("Audio played");
+				}
 			} else if (runnumber === 9) {
 			    document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
+				if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio8.play();
+					console.log("Audio played");
+				}
 			} else if (runnumber === 10) {
 			    reset();
 			}
@@ -183,8 +203,16 @@
 		    var response = document.getElementById("textarea1").value;
 		    if (runnumber === 8) {
 			    document.getElementById("test").innerHTML = "Better that nothing, I suppose.";
+				if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio6.play();
+					console.log("Audio played");
+				}
 			} else if (runnumber === 9) {
 			    document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
+				if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio8.play();
+					console.log("Audio played");
+				}
 			} else if (runnumber === 10) {
 			    reset();
 			}
@@ -194,8 +222,16 @@
 		    var response = document.getElementById("textarea1").value;
 			if (runnumber === 8) {
 			    document.getElementById("test").innerHTML = "I'm sorry. Is there a way I can make you feel better, " + name + ".";
+				if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio7.play();
+					console.log("Audio played");
+				}
 			} else if (runnumber === 9) {
 			    document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
+				if (audio_yn.toLowerCase() === "y") { //Audio Player
+					audio8.play();
+					console.log("Audio played");
+				}
 			} else if (runnumber === 10) {
 			    reset();
 			}
