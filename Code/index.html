@@ -36,8 +36,7 @@
 		<!--The button above runs the JavaScript.-->
         <button id="button3" onclick="reset()">Reset</button>
         <textarea rows="5" cols="20" id="textarea1">Input here.</textarea>
-        <button onclick="setName()" id="confirm">Confirm</button>
-        <textarea rows="1" cols="11" id="namebox">Name</textarea>
+        <textarea rows="1" cols="11" id="namebox">Name Here</textarea>
         <p id="test">
              <b>INSTRUCTIONS:</b>
             <br>Please enter your name into the text area that says 'Name' and leave it there.
@@ -59,6 +58,8 @@
 		<textarea id="showRunNumber" rows=1 cols=6>false</textarea>
 		<p>Reset Name</p>
 		<textarea id="resetName" rows=1 cols=6>false</textarea>
+		<p>Play Audio</p>
+		<textarea id="playAudio" rows=1 cols=6>false</textarea>
 	</details>
     <script>
         var runnumber = 0;
@@ -81,7 +82,8 @@
 		
 		//AUDIO//
         function myFunction() {
-            runnumber = (runnumber + 1);
+		    name = document.getElementById("namebox").value;
+            runnumber++;
 		    console.log("runnumber: " + runnumber);
             var response = document.getElementById("textarea1").value;
             console.log("Response: " + response);
@@ -96,29 +98,37 @@
             }
             //Use this for response
             if (runnumber === 1) {
-                document.getElementById("test").innerHTML = "Hello, " + name + "!";
-            } else if (runnumber === 2) {
                 document.getElementById("test").innerHTML = "Loading...";
-				audio_yn = prompt("Would you like audio? y/N"); //Audio prompt
+				audio_yn = document.getElementById("playAudio").value;
+				if (audio_yn.toLowerCase() === "true") {
+				    audio_yn = "y";
+				} else if (audio_yn.toLowerCase() === "false") {
+				    audio_yn = "n";
+				} else {
+				    document.getElementById("playAudio").value = "false";
+				}
 				console.log("Audio Results: " + audio_yn.toUpperCase());
-            } else if (runnumber === 3) { //I put the "loading" stuff in this program to buy myself time and to save effort.
+            } else if (runnumber === 2) { //I put the "loading" stuff in this program to add a spot that I can use to load stuff in and to buy myself time and because I thought it was a decent idea at the time and I'm too lazy to take it all out and write one extra line of code and take two out.
+                document.getElementById("test").innerHTML = "Finished Loading.";
+				if (audio_yn === "y") { //Audio Player
+					audio4.play();
+				    console.log("Audio played");
+				}
+            } else if (runnumber === 3) {
                 if (response.toLowerCase() === "instructions") {
                     document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Then press 'Confirm'<br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paragraph (after you press the button!).<br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times. <br>Whenever there is an option, press Press Here twice after answering.";
                 } else {
-				    if (audio_yn.toLowerCase() === "y") { //Audio Player
-					    audio4.play();
-						console.log("Audio played");
-					}
-                    document.getElementById("test").innerHTML = "Finished Loading.";
+                    document.getElementById("test").innerHTML = "Hello, " + name + "!";
                 }
             } else if (runnumber === 4) {
                 document.getElementById("test").innerHTML = "What would you like for me to do? There are two options; type 1 to <br> continue with this program or 2 to run a confedential series of programs.";
-				if (audio_yn.toLowerCase() === "y") { //Audio Player
+				if (audio_yn === "y") { //Audio Player
 					audio1.play();
 					console.log("Audio played");
 				}
             } else if (runnumber === 5) {
                 if (response === "1") {
+				    document.getElementById("test").innerHTML = "Loading...";
 				    firstpick = "done1";
                 } else if (response === "2") {
                     document.getElementById("test").innerHTML = "Loading...";
@@ -140,13 +150,13 @@
 			    subBranch1_3();
 			}
 		    if (runnumber === 5) {
-			    if (audio_yn.toLowerCase() === "y") { //Audio Player
+			    if (audio_yn === "y") { //Audio Player
 					audio2.play();
 					console.log("Audio played");
 				}
 			    document.getElementById("test").innerHTML = "Okay, I'll do that for you.";
 			} else if (runnumber === 6) {
-			    if (audio_yn.toLowerCase() === "y") { //Audio Player
+			    if (audio_yn === "y") { //Audio Player
 					audio3.play();
 					console.log("Audio played");
 				}
@@ -184,13 +194,13 @@
 		    var response = document.getElementById("textarea1").value;
 		    if (runnumber === 8) {
 			    document.getElementById("test").innerHTML = "I'm glad you're feeling good, " + name + ".";
-				if (audio_yn.toLowerCase() === "y") { //Audio Player
+				if (audio_yn === "y") { //Audio Player
 					audio5.play();
 					console.log("Audio played");
 				}
 			} else if (runnumber === 9) {
 			    document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
-				if (audio_yn.toLowerCase() === "y") { //Audio Player
+				if (audio_yn === "y") { //Audio Player
 					audio8.play();
 					console.log("Audio played");
 				}
@@ -203,13 +213,13 @@
 		    var response = document.getElementById("textarea1").value;
 		    if (runnumber === 8) {
 			    document.getElementById("test").innerHTML = "Better that nothing, I suppose.";
-				if (audio_yn.toLowerCase() === "y") { //Audio Player
+				if (audio_yn === "y") { //Audio Player
 					audio6.play();
 					console.log("Audio played");
 				}
 			} else if (runnumber === 9) {
 			    document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
-				if (audio_yn.toLowerCase() === "y") { //Audio Player
+				if (audio_yn === "y") { //Audio Player
 					audio8.play();
 					console.log("Audio played");
 				}
@@ -222,13 +232,13 @@
 		    var response = document.getElementById("textarea1").value;
 			if (runnumber === 8) {
 			    document.getElementById("test").innerHTML = "I'm sorry. Is there a way I can make you feel better, " + name + ".";
-				if (audio_yn.toLowerCase() === "y") { //Audio Player
+				if (audio_yn === "y") { //Audio Player
 					audio7.play();
 					console.log("Audio played");
 				}
 			} else if (runnumber === 9) {
 			    document.getElementById("test").innerHTML = "Goodbye, " + name + ".";
-				if (audio_yn.toLowerCase() === "y") { //Audio Player
+				if (audio_yn === "y") { //Audio Player
 					audio8.play();
 					console.log("Audio played");
 				}
@@ -238,10 +248,6 @@
 		}
 		
 		// DIVIDER
-
-        function setName() {
-            name = document.getElementById("namebox").value;
-        }
 		
 		function reset() {
 		    var resetName = document.getElementById("resetName").value;
@@ -251,7 +257,7 @@
 			}
 			firstpick = "";
 			secondpick = "";
-			audio_yn = "";
+			document.getElementById("playAudio").value = "false";
             document.getElementById("test").innerHTML = "Reset.";
             console.log("Reset.")
         }

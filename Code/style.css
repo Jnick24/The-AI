@@ -1,6 +1,7 @@
 body {
     color: #ffa500;
 }
+/*The AI (Old)*/
 #MainText {
     position: absolute;
     left: 10px;
@@ -22,20 +23,15 @@ body {
     left: 500px;
     top: 175px;
 }
-/*#*/
+/*The AI (once Experimental Development Version)*/
  #textarea1 {
     position: absolute;
     left: 500px;
     top: 195px;
 }
-#confirm {
-    position: absolute;
-    left: 500px;
-    top: 275px;
-}
 #namebox {
     position: absolute;
-    left: 563px;
+    left: 500px;
     top: 275px;
 }
 a {
