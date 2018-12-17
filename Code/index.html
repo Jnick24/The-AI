@@ -40,13 +40,12 @@
         <p id="test">
              <b>INSTRUCTIONS:</b>
             <br>Please enter your name into the text area that says 'Name' and leave it there.
-            <br>Then press 'Confirm'
             <br>Click on the button that says 'Press Here' to run the program.
             <br>Click on the 'Reset' button to reset the program.
             <br>The menu functions as normal.
             <br>Follow the directions on this paragraph (after you press the button!).
-            <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.
 			<br>Whenever there is an option, press "Press Here" twice after answering.
+            <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.
         </p>
         <button onclick="startprint()">Print webpage</button>
 		<p>See it on Github! <a href="https://github.com/Jnick24/The-AI">https://github.com/Jnick24/The-AI</a></p>
@@ -116,12 +115,12 @@
 				}
             } else if (runnumber === 3) {
                 if (response.toLowerCase() === "instructions") {
-                    document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Then press 'Confirm'<br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paragraph (after you press the button!).<br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times. <br>Whenever there is an option, press Press Here twice after answering.";
+                    document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paragraph (after you press the button!). <br>Whenever there is an option, press Press Here twice after answering. <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.";
                 } else {
                     document.getElementById("test").innerHTML = "Hello, " + name + "!";
                 }
             } else if (runnumber === 4) {
-                document.getElementById("test").innerHTML = "What would you like for me to do? There are two options; type 1 to <br> continue with this program or 2 to run a confedential series of programs.";
+                document.getElementById("test").innerHTML = "What would you like for me to do? There are two options; type 1 to <br> continue with this program or 2 to view the webpage menu.";
 				if (audio_yn === "y") { //Audio Player
 					audio1.play();
 					console.log("Audio played");
@@ -174,19 +173,24 @@
 
         function branch2() {
 		    var response = document.getElementById("textarea1").value;
-            if (runnumber === 5) {
-                document.getElementById("test").innerHTML = "I still don't know what to put here. If you have an idea, please send me a message at WVcwNWVtRkhOWEJaTW5Rd1dsZE9iMUZIWkhSWlYyeHpURzFPZG1KUlBUMD0=";
-            } else if (runnumber === 6) {
-                document.getElementById("test").innerHTML = "Thank you for viewing.";
+            if (runnumber === 6) {
+                document.getElementById("test").innerHTML = "Options: <br>A: The AI (old) <br>B: Menu <br>C: Contacts <br>D: Testing Files";
             } else if (runnumber === 7) {
-			    document.getElementById("test").innerHTML = "Goodbye! This is the end of the program.";
-			} else if (runnumber === 8) {
-			    document.getElementById("test").innerHTML = "I'm serious. Nothing is left after this.";
-			} else if (runnumber === 50) {
-			    document.getElementById("test").innerHTML = "I admire your persistance.";
-			} else if (runnumber === 60) {
-			    document.getElementById("test").innerHTML = "Easter Egg!";
-				document.getElementById("textarea1").value = "This is an easter egg.";
+                if (response.toLowerCase() === "a") {
+				    window.setTimeout(function(){ window.location = "./OLD.AI.html"; },10);
+				} else if (response.toLowerCase() === "b") {
+				    window.setTimeout(function(){ window.location = "./MENU.AI.html"; },10);
+				} else if (response.toLowerCase() === "c") {
+				    window.setTimeout(function(){ window.location = "./CONTACT.AI.html"; },10);
+				} else if (response.toLowerCase() === "d") {
+				    document.getElementById("test").innerHTML = "Options: <br>A: Audio Testing File <br>B: The Current AI Predecessor";
+				}
+            } else if  (runnumber === 8) {
+			    if (response.toLowerCase() === "a") {
+				    window.setTimeout(function(){ window.location = "./Testing Code/index.html"; },10);
+				} else if (response.toLowerCase() === "b") {
+				    window.setTimeout(function(){ window.location = "./Testing Code/index - Copy (2).html"; },10);
+				}
 			}
         }
 		
