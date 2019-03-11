@@ -32,20 +32,20 @@
         </li>
     </ul>
     <div id="InputOutput">
-        <button id="button2" onclick="myFunction()">Press here</button>
+        <button id="button2" onclick="myFunction()">Confirm</button>
 		<!--The button above runs the JavaScript.-->
         <button id="button3" onclick="reset()">Reset</button>
-        <textarea rows="5" cols="20" id="textarea1">Input here.</textarea>
-        <textarea rows="1" cols="11" id="namebox">Name Here</textarea>
+        <textarea rows="5" cols="20" id="textarea1" placeholder="Input Response Here"></textarea>
+        <textarea rows="1" cols="20" id="namebox" placeholder="Name Here"></textarea>
         <p id="test">
              <b>INSTRUCTIONS:</b>
             <br>Please enter your name into the text area that says 'Name' and leave it there.
-            <br>Click on the button that says 'Press Here' to run the program.
+            <br>Click on the button that says 'Confirm' to run the program.
             <br>Click on the 'Reset' button to reset the program.
             <br>The menu functions as normal.
             <br>Follow the directions on this paragraph (after you press the button!).
-			<br>Whenever there is an option, press "Press Here" twice after answering.
-            <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.
+			<br>Whenever there is an option, press 'Confirm' twice after answering.
+            <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Confirm' three times.
         </p>
         <button onclick="startprint()">Print webpage</button>
 		<p>See it on Github! <a href="https://github.com/Jnick24/The-AI">https://github.com/Jnick24/The-AI</a></p>
@@ -57,7 +57,7 @@
 		<textarea id="showRunNumber" rows=1 cols=6>false</textarea>
 		<p>Reset Name</p>
 		<textarea id="resetName" rows=1 cols=6>false</textarea>
-		<p>Play Audio</p>
+		<p>Play Audio (In Development)</p>
 		<textarea id="playAudio" rows=1 cols=6>false</textarea>
 	</details>
     <script>
@@ -107,7 +107,7 @@
 				    document.getElementById("playAudio").value = "false";
 				}
 				console.log("Audio Results: " + audio_yn.toUpperCase());
-            } else if (runnumber === 2) { //I put the "loading" stuff in this program to add a spot that I can use to load stuff in and to buy myself time and because I thought it was a decent idea at the time and I'm too lazy to take it all out and write one extra line of code and take two out.
+            } else if (runnumber === 2) { //I put the "loading" stuff in this program to add a spot that I can use to load stuff in and to buy myself time and because I thought it was a decent idea at the time and I'm too lazy to take it all out and replace the functioncount numbers.
                 document.getElementById("test").innerHTML = "Finished Loading.";
 				if (audio_yn === "y") { //Audio Player
 					audio4.play();
@@ -115,7 +115,7 @@
 				}
             } else if (runnumber === 3) {
                 if (response.toLowerCase() === "instructions") {
-                    document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Click on the button that says 'Press Here' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paragraph (after you press the button!). <br>Whenever there is an option, press Press Here twice after answering. <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Press Here' three times.";
+                    document.getElementById("test").innerHTML = "<b>INSTRUCTIONS:</b> <br>Please enter your name into the text area that says 'Name' and leave it there. <br>Click on the button that says 'Confirm' to run the program.<br>Click on the 'Reset' button to reset the program.<br>The menu functions as normal.<br>Follow the directions on this paragraph (after you press the button!). <br>Whenever there is an option, press Confirm twice after answering. <br>To see these instructions again, press 'Reset' and type instructions in the text box. Then press 'Confirm' three times.";
                 } else {
                     document.getElementById("test").innerHTML = "Hello, " + name + "!";
                 }
